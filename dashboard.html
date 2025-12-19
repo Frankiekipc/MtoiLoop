@@ -2,82 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MTOILOOP Dashboard</title>
+    <meta charset="UTF-8">
+    <title>Dashboard - Mtoi Loop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="dashboard">
+    <div class="dashboard-layout">
         <div class="sidebar">
-            <h2>MtoiLoop</h2>
-            <a href="#" class="active">Dashboard</a>
-            <a href="#">Tracking</a>
-            <a href="#">Activities</a>
-            <a href="#">Health</a>
-            <a href="#">Milestones</a>
-            <a href="#">Messages</a>
-            <a href="#">Calendar</a>
-            <a href="#">Settings</a>
-            <button class="logout" onclick="logout()">Logout</button>
+            <h2>Mtoi Loop</h2>
+            <a href="#" class="active">🏠 Dashboard</a>
+            <a href="#">📍 Bus Tracker</a>
+            <a href="#">🥗 Meals</a>
+            <button class="logout" onclick="location.href='login.html'">Logout</button>
         </div>
-        <div class="main">
-            <div class="top">
-                <h1>Welcome back, <span id="userName">Akwafina </span> 👋</h1>
-                <div class="avatar" id="avatar">S</div>
-            </div>
-            <div class="stats">
-                <div class="card">
-                    <b>🚌 Bus Status</b>
+        <div class="main-content">
+            <h1>Hello, Jane Maina!</h1>
+            <div class="stats-grid">
+                <div class="card"><b>Status</b>
+                    <p>In Class</p>
+                </div>
+                <div class="card"><b>Bus</b>
                     <p>At School</p>
                 </div>
-                <div class="card">
-                    <b>✅ Attendance</b>
-                    <p>Present</p>
+                <div class="card"><b>Lunch</b>
+                    <p>Finished</p>
                 </div>
-                <div class="card">
-                    <b>🍎 Meals</b>
-                    <p>2 of 3</p>
-                </div>
-                <div class="card">
-                    <b>💬 Messages</b>
-                    <p>3</p>
+                <div class="card"><b>Pick Up</b>
+                    <p>4:30 PM</p>
                 </div>
             </div>
-            <div class="alert"><b>📢 Event:</b> Conference Friday, 3 PM.</div>
-            <div class="activity">
-                <h3>Today's Activity</h3>
-                <div class="activity-item">8:15 AM - Boarded Bus</div>
-                <div class="activity-item">8:45 AM - Arrived at School</div>
-                <div class="activity-item">9:30 AM - Breakfast</div>
-                <div class="activity-item">11:00 AM - Art Activity</div>
-                <div class="activity-item">12:30 PM - Lunch</div>
-            </div>
-            <div class="child">
-                <div class="child-avatar">E</div>
-                <h3>Daudi Okelo</h3>
-                <p>5 yrs • Grade 1</p>
-                <div class="badge">At School</div>
-                <br />
-                <button class="action">📍 Track</button>
-                <button class="action">💬 Message</button>
+            <div class="child-profile">
+                <div class="avatar-circle">K</div>
+                <div>
+                    <h2>Tevin Maina</h2>
+                    <p>PP2 Blue • School: Westview Acad.</p>
+                    <span class="status-tag">● Checked In: 7:45 AM</span>
+                    <div class="action-group">
+                        <button class="btn-small btn-teal">Track Bus</button>
+                        <button class="btn-small btn-gray">Message Teacher</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <script>
-        let name = localStorage.getItem("userName") || "Sarah Johnson";
-        document.getElementById("userName").textContent = name.split(" ")[0];
-        document.getElementById("avatar").textContent = name
-            .split(" ")
-            .map((n) => n[0])
-            .join("");
-
-        function logout() {
-            localStorage.clear();
-            alert("Logged out!");
-        }
-    </script>
 </body>
 
 </html>

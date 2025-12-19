@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Mtoi Loop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <h2>Parent Login</h2>
+            <div class="demo-box"><b>Demo:</b> parent@mtoi.com | mtoi123</div>
+            <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+                <div class="form-group"><label>Email</label><input type="email" required></div>
+                <div class="form-group"><label>Password</label><input type="password" required></div>
+                <button type="submit" class="btn-primary">Secure Login</button>
+            </form>
+            <p>New? <a href="signup.html">Join the Loop</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
